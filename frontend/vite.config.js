@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/ArchiveAmd/',
+  base: '/',
+  // base: '/ArchiveAmd/',
   server: {
     port: 5176,
     proxy: {
