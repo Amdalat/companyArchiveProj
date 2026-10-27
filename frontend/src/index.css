@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body { 
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif; 
+    color:#152238; 
+    background:#f6f8fc; 
+}
+
+input, select { 
+    outline:none; 
+}
+
+button { 
+    cursor:pointer; 
+}
+
+.field { 
+    width:100%; 
+    border:1px solid #dce2ed; 
+    border-radius:10px; 
+    padding:11px 13px; 
+    background:white; 
+}
+
+.field:focus { 
+    border-color:#4779f5; 
+    box-shadow:0 0 0 3px #4779f51a; 
+}
+
+.card { 
+    background:white; 
+    border:1px solid #e8ecf4; 
+    border-radius:16px; 
+    padding:24px; 
+}
+
+.btn { 
+    background:#315fed; 
+    color:white; 
+    padding:11px 18px; 
+    border-radius:10px; 
+    font-weight:600; 
+}
+
+.btn:disabled { 
+    opacity:.55; 
+    cursor:wait; 
+}
+
+.btn-light { 
+    border:1px solid #dce2ed; 
+    background:white; 
+    color:#20314e; 
+    padding:10px 16px; 
+    border-radius:10px; 
+    font-weight:600; 
+}
+
+.label { 
+    font-size:13px; 
+    font-weight:600; 
+    color:#50617d; 
+    display:block; 
+    margin-bottom:7px; 
+}
+
