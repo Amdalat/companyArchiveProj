@@ -22,7 +22,7 @@ export default function App() {
     finally { setUser(null); }
   }
 
-  if (loading) return <div className="grid min-h-screen place-items-center text-slate-500">Loading ArchivePro…</div>;
+  if (loading) return <div className="grid min-h-screen place-items-center text-slate-500">Loading ArchiveAmd…</div>;
 
   return (
     <Routes>

@@ -1,7 +1,8 @@
-const API_URL = import.meta.env.VITE_API_URL || '';
+// const API_URL = import.meta.env.VITE_API_URL || '';
 
 export async function request(path, options = {}) {
-  const response = await fetch(`${API_URL}/api${path}`, { 
+  const response = await fetch(`/api${path}`, { 
+  // const response = await fetch(`${API_URL}/api${path}`, { 
     credentials: 'include', 
     ...options 
   });
