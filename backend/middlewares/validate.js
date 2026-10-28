@@ -3,8 +3,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 const verifytoken = async(req, res, next) => {
-    const token = req.headers.cookie?.split("=")[1];
-    console.log(`token: ${token}`);
+    const token = req.cookies?.access_token;    console.log(`token: ${token}`);
 
     if (!token) {
         return res.status(401).json({message: "Access denied"});
