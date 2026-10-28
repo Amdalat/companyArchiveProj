@@ -130,8 +130,12 @@ const signin = async (req, res) => {
 
         res.cookie('access_token', token, {
             httpOnly: true,
+            secure: true,
+            sameSite: 'none',
             path: '/',
-            expires: new Date(Date.now() + 60*60*1000),
+            maxAge: 60 * 60 * 1000,
+            
+            // expires: new Date(Date.now() + 60*60*1000),
         })
 
         return res.status(200).json({ message: "Signin Successful", token });

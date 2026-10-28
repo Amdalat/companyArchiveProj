@@ -1,7 +1,10 @@
-// API calls live here so page components stay small and readable.
-// Vite forwards /api requests to your Express server (see vite.config.js).
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 export async function request(path, options = {}) {
-  const response = await fetch(`/api${path}`, { credentials: 'include', ...options });
+  const response = await fetch(`${API_URL}/api${path}`, { 
+    credentials: 'include', 
+    ...options 
+  });
   const data = await response.json().catch(() => null);
   if (!response.ok) throw new Error(data?.message || (typeof data === 'string' ? data : 'Request failed'));
   return data;
