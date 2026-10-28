@@ -10,7 +10,10 @@ app.use(express.json());
 
 app.use(cors({
     // origin: "http://localhost:5174",
-    origin: 'https://companyarchiveamdui.onrender.com',
+    origin: [
+      'https://companyarchiveamdui.onrender.com',
+      "http://localhost:5176"
+    ],
     credentials: true
 }));
 

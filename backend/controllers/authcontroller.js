@@ -53,6 +53,7 @@ const createCompany = async (req, res) => {
         
         return res.status(201).json("Company created successfully")
     } catch (err) {
+        console.error("Company registration failed:", err);
         return res.status(401).json({message:"Error occurred", err: err.message})
     }
 }
@@ -134,7 +135,7 @@ const signin = async (req, res) => {
             sameSite: 'none',
             path: '/',
             maxAge: 60 * 60 * 1000,
-            
+
             // expires: new Date(Date.now() + 60*60*1000),
         })
 
